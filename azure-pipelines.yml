@@ -18,9 +18,9 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: CopyFiles@2
+- task: CopyPublishBuildArtifacts@1
   inputs:
-    SourceFolder: '''$(System.DefaultWorkingDirectory)'
+    CopyRoot: '''$(System.DefaultWorkingDirectory)'
     Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    OverWrite: true
+    ArtifactName: 'Kube-Manifests'
+    ArtifactType: 'FilePath'
