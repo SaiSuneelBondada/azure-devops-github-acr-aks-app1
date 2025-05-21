@@ -23,4 +23,4 @@ steps:
     CopyRoot: '''$(System.DefaultWorkingDirectory)'
     Contents: '**'
     ArtifactName: 'Kube-Manifests'
-    ArtifactType: 'FilePath'
+    ArtifactType: 'Server'
